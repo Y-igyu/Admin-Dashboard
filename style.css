@@ -14,7 +14,7 @@ html, body {
     display: grid;
     grid-template: 1fr 5fr / 270px 4fr;
 }
-
+/* Section 1 */
 #sideBar {
     background-color: #0f172a;
     color: white;
@@ -65,6 +65,9 @@ html, body {
     background-color: #94a3b8;
     grid-area: 1/2/2/3;
     grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 #mainContent {
