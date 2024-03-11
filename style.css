@@ -75,8 +75,9 @@ html, body {
     background-color: #dde5e8;
     grid-area: 2/2/3/3;
     display: grid;
-    grid-template-columns: 3fr 300px;
-    grid-template-rows: 350px 1fr;
+    grid-template-columns: 3fr 350px;
+    grid-template-rows: 480px 1fr;
+    gap: 20px;
 }
 
 #yourProjects {
@@ -91,14 +92,32 @@ h2 {
 
 .projectWrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
 }
 
 .card {
-    border: 1px solid;
-    height: 230px;
+    height: 200px;
     padding: 30px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.card, .annCard, .trendCard {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.left-color {
+    position: absolute;
+    background-color: rgb(225, 168, 33);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 #announcements {
@@ -108,13 +127,65 @@ h2 {
 
 #trending {
     grid-area: 2/2/3/3;
+    padding-top: 30px;
 }
 
 .annCard, .trendCard {
-    border: 1px solid;
-    width: 250px;
+    width: 300px;
 }
 
 .annCard > div, .trendCard > div {
-    padding: 20px;
+    padding: 30px;
+}
+
+.box {
+    position: relative;
+}
+
+.bottom-line {
+    position: absolute;
+    background-color: #cdcdce;
+    width: 103%;
+    height: 1px;
+    bottom: -27px;
+    left: -4px;
+}
+
+.projInfo {
+    justify-self: flex-end;
+    display: flex;
+    gap: 30px;
+}
+
+.text {
+    color: #6b6b6b;
+}
+
+.trendingCard {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 15px;
+}
+
+.profilePicture {
+    border-radius: 30px;
+}
+
+.profilePicture > img {
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+}
+
+.profile {
+    align-self: center;
+}
+
+.trendyProj {
+    color: #6b6b6b;
+}
+
+button {
+    border: none;
+    background-color: white;
 }
