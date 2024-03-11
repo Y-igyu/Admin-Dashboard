@@ -15,7 +15,7 @@ html, body {
     display: grid;
     grid-template: 1fr 5fr / 270px 4fr;
 }
-/* Section 1 */
+
 #sideBar {
     background-color: #00a8e5;
     color: white;
@@ -69,6 +69,61 @@ html, body {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 1fr;
+    padding: 20px 20px 20px 50px;
+}
+
+#mainProfilePic {
+    width: 85px;
+    height: 85px;
+}
+
+#userGreeting {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.hello {
+    align-self: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hi {
+    padding-bottom: 6px;
+}
+
+.userGreet {
+    font-size: 25px;
+}
+
+#user {
+    justify-self: flex-end;
+    align-self: flex-start;
+    display: grid;
+    grid-template-columns: 50px 50px 150px;
+    padding-right: 50px;
+}
+
+.userName {
+    font-weight: bold;
+    font-size: 18px
+}
+
+.notification, .userProfPic {
+    align-self: center;
+}
+
+#search {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    grid-template-rows: 35px;
+    gap: 10px;
+}
+
+.searchBar {
+    border-radius: 20px;
+    border: none;
+    background-color: #dde5e8;
 }
 
 #mainContent {
@@ -135,7 +190,11 @@ h2 {
 }
 
 .annCard > div, .trendCard > div {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
+}
+
+.trendCard:nth-of-type(1), .annCard:nth-of-type(1) {
+    padding-top: 30px;
 }
 
 .box {
@@ -147,7 +206,7 @@ h2 {
     background-color: #cdcdce;
     width: 103%;
     height: 1px;
-    bottom: -27px;
+    bottom: -20px;
     left: -4px;
 }
 
@@ -168,7 +227,9 @@ h2 {
 }
 
 .profilePicture {
-    border-radius: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
 }
 
 .profilePicture > img {
@@ -188,4 +249,37 @@ h2 {
 button {
     border: none;
     background-color: white;
+}
+.contentBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.contentBtn:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.projectControl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-self: center;
+    padding-right: 40px;
+}
+
+.projBtns {
+    background-color: #00a8e5;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+}
+
+.projBtns:hover {
+    background-color: #009fd8;
+}
+
+.card, .annCard, .trendCard {
+    box-shadow: 2px 5px 8px rgb(166, 165, 165);
 }
